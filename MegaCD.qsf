@@ -13,7 +13,7 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 
-set_global_assignment -name LAST_QUARTUS_VERSION "17.0.2 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
 
 set_global_assignment -name GENERATE_RBF_FILE ON
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
@@ -54,4 +54,19 @@ set_global_assignment -name SEED 1
 source sys/sys.tcl
 source sys/sys_analog.tcl
 source files.qip
+set_global_assignment -name VERILOG_FILE joydb9md.v
+set_global_assignment -name CDF_FILE jtag.cdf
+set_global_assignment -name QIP_FILE sys/sys.qip
+set_global_assignment -name QIP_FILE FX68K/fx68k.qip
+set_global_assignment -name QIP_FILE GEN/GEN.qip
+set_global_assignment -name QIP_FILE MCD/MCD.qip
+set_global_assignment -name SYSTEMVERILOG_FILE sdram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ddram.sv
+set_global_assignment -name VHDL_FILE bram.vhd
+set_global_assignment -name VHDL_FILE mlab.vhd
+set_global_assignment -name VHDL_FILE CEGen.vhd
+set_global_assignment -name VHDL_FILE snd_mix.vhd
+set_global_assignment -name SYSTEMVERILOG_FILE cofi.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MegaCD.sv
+set_global_assignment -name SOURCE_FILE db/MegaCD.cmp.rdb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
