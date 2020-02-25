@@ -278,8 +278,9 @@ wire [24:0] ps2_mouse;
 wire [21:0] gamma_bus;
 
 
-wire [11:0] joystick_0 = |status[63:62] ? joydb9md_1: joystick_0_USB;
-wire [11:0] joystick_1 =  status[63]    ? joydb9md_2 : status[62] ? joystick_0_USB : joystick_1_USB;
+// ZYX M S CBA UDLR
+wire [11:0] joystick_0 = |status[63:62] ? {joydb9md_1[11:7],joydb9md_1[5],joydb9md_1[4],joydb9md_1[6],joydb9md_1[3:0]} : joystick_0_USB;
+wire [11:0] joystick_1 =  status[63]    ? {joydb9md_2[11:7],joydb9md_2[5],joydb9md_2[4],joydb9md_2[6],joydb9md_2[3:0]} : status[62] ? joystick_0_USB : joystick_1_USB;
 wire [11:0] joystick_2 =  status[63]    ? joystick_0_USB : status[62] ? joystick_1_USB : joystick_2_USB;
 wire [11:0] joystick_3 =  status[63]    ? joystick_1_USB : status[62] ? joystick_2_USB : joystick_3_USB;
 
