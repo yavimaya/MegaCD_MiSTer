@@ -203,8 +203,6 @@ localparam CONF_STR = {
 	"S0,CUE,Insert Disk;",
 	"-;",
 	"O67,Region,JP,US,EU;",
-	"oUV,UserIO Joystick,Off,DB9MD,DB15 ;",
-	"oT,UserIO Players, 1 Player,2 Players;",
 	"-;",
 	"C,Cheats;",
 	"H5OO,Cheats Enabled,Yes,No;",
@@ -230,6 +228,9 @@ localparam CONF_STR = {
 	"P1ON,HiFi PCM,No,Yes;",
 
 	"P2,Input;",
+	"P2-;",
+	"P2oUV,UserIO Joystick,Off,DB9MD,DB15 ;",
+	"P2oT,UserIO Players, 1 Player,2 Players;",
 	"P2-;",
 	"P2O4,Swap Joysticks,No,Yes;",
 	"P2O5,6 Buttons Mode,No,Yes;",
